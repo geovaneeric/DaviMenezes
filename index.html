@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DV Frame — Videomaker</title>
+  <meta name="description" content="DV Frame — produção audiovisual sob medida. Vídeos, edição e cobertura de eventos." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400..700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="variables.css" />
+  <link rel="stylesheet" href="base.css" />
+  <link rel="stylesheet" href="components.css" />
+  <link rel="stylesheet" href="animations.css" />
+</head>
+<body>
+
+  <!-- Sprocket rails (signature motif) -->
+  <div class="sprocket-rail sprocket-rail--left" aria-hidden="true"></div>
+  <div class="sprocket-rail sprocket-rail--right" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo">Davi<span>Menezes</span></a>
+      <nav class="nav__links">
+        <a href="#sobre">Sobre</a>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#extras">Extras</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <a href="#contato" class="btn btn--ghost nav__cta">Fale comigo</a>
+      <button class="nav__burger" id="navBurger" aria-label="Abrir menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="top">
+    <div class="hero__grain" aria-hidden="true"></div>
+    <div class="hero__content">
+      <p class="eyebrow reveal">videomaker · produção audiovisual</p>
+      <h1 class="hero__title reveal">
+        Cada história<br />
+        merece um <em>bom corte.</em>
+      </h1>
+      <p class="hero__subtitle reveal">
+        Sou Davi Menezes — gravo, edito e entrego vídeos que capturam o momento
+        certo, no ritmo certo. De registros pessoais a coberturas completas de eventos.
+      </p>
+      <div class="hero__actions reveal">
+        <a href="#pacotes" class="btn btn--primary">Ver pacotes</a>
+        <a href="#contato" class="btn btn--outline">Fazer orçamento</a>
+      </div>
+    </div>
+
+    <div class="hero__slate reveal" aria-hidden="true">
+      <div class="slate">
+        <div class="slate__row">
+          <span>PROD.</span><span id="slateProd">DVF</span>
+        </div>
+        <div class="slate__row">
+          <span>CENA</span><span id="slateScene">01</span>
+        </div>
+        <div class="slate__row">
+          <span>TAKE</span><span id="slateTake">01</span>
+        </div>
+        <div class="slate__timecode" id="timecode">00:00:00:00</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SOBRE ============ -->
+  <section class="about" id="sobre">
+    <div class="section-head reveal">
+      <p class="eyebrow">quem edita</p>
+      <h2>Um olhar dedicado a cada frame.</h2>
+    </div>
+    <div class="about__grid">
+      <p class="about__text reveal">
+        Trabalho com produção de vídeo do primeiro clique ao corte final: gravação,
+        edição, cor e trilha sonora — sempre pensando em como cada peça vai ser
+        assistida, seja em um feed, em um telão ou entre amigos. Cada pacote abaixo
+        foi pensado para caber em momentos diferentes, de um registro rápido a uma
+        cobertura completa de vários dias.
+      </p>
+      <ul class="about__stats reveal">
+        <li><span class="about__stat-num">+50h</span><span>de gravação entregues</span></li>
+        <li><span class="about__stat-num">6</span><span>formatos de pacote</span></li>
+        <li><span class="about__stat-num">100%</span><span>edição sob medida</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ============ PACOTES PRINCIPAIS ============ -->
+  <section class="packages" id="pacotes">
+    <div class="section-head reveal">
+      <p class="eyebrow">lista de preços</p>
+      <h2>Pacotes de produção</h2>
+      <p class="section-head__desc">
+        Cada pacote inclui o tempo de gravação, a edição e a entrega dos vídeos
+        combinados. Todos os valores em real (R$).
+    </div>
+    <div class="package-tiers" id="mainPackages"><!-- injetado via JS (packages.js) --></div>
+  </section>
+
+  <!-- ============ PACOTES 30S ============ -->
+  <section class="packages packages--alt" id="pacotes-30s">
+    <div class="section-head reveal">
+      <p class="eyebrow">formato curto</p>
+      <h2>Pacotes adicionais — vídeos de 30s</h2>
+      <p class="section-head__desc">
+        Ideal para quem precisa de mais conteúdo curto para redes sociais.
+      </p>
+    </div>
+    <div class="package-grid" id="shortPackages"><!-- injetado via JS (packages.js) --></div>
+  </section>
+
+  <!-- ============ SERVIÇOS ADICIONAIS ============ -->
+  <section class="extras" id="extras">
+    <div class="section-head reveal">
+      <p class="eyebrow">sob demanda</p>
+      <h2>Serviços adicionais</h2>
+    </div>
+    <div class="extras-grid" id="extraServices"><!-- injetado via JS (packages.js) --></div>
+  </section>
+
+  <!-- ============ CONTATO ============ -->
+  <!-- ============ CONTATO ============ -->
+<section class="contact" id="contato">
+  <div class="section-head reveal">
+    <p class="eyebrow">vamos gravar</p>
+    <h2>Fale comigo</h2>
+    <p class="section-head__desc">
+      Escolhe o canal que preferir — geralmente respondo rápido.
+    </p>
+  </div>
+
+  <div class="contact-panel reveal">
+    <a class="contact-primary" id="contactPrimary" href="https://wa.me/557599990776" target="_blank" rel="noopener">
+      <span class="contact-primary__glow" aria-hidden="true"></span>
+      <span class="contact-primary__icon">
+        <span class="contact-primary__pulse" aria-hidden="true"></span>
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M17.6 6.4A8.9 8.9 0 0 0 12.05 3.9 9 9 0 0 0 3.1 15.6L2 20l4.5-1.1a9 9 0 0 0 4.5 1.2h.02A9 9 0 0 0 20 12a8.9 8.9 0 0 0-2.4-5.6Zm-5.55 13.4h-.02a7.5 7.5 0 0 1-3.83-1.05l-.27-.16-2.68.66.7-2.63-.18-.27a7.5 7.5 0 0 1 11.7-9.3 7.4 7.4 0 0 1 2.2 5.3 7.5 7.5 0 0 1-7.62 7.45Zm4.1-5.6c-.22-.11-1.32-.65-1.53-.73-.2-.08-.35-.11-.5.11-.15.22-.58.73-.71.88-.13.15-.26.16-.48.06-.22-.11-.94-.35-1.79-1.1-.66-.59-1.1-1.32-1.23-1.54-.13-.22-.01-.34.1-.45.1-.1.22-.26.33-.39.11-.13.15-.22.22-.37.07-.15.04-.28-.02-.39-.06-.11-.5-1.21-.69-1.66-.18-.43-.37-.38-.5-.38h-.43c-.15 0-.39.06-.6.28-.2.22-.78.77-.78 1.87s.8 2.17.91 2.32c.11.15 1.58 2.4 3.82 3.37.53.23.95.37 1.27.47.53.17 1.02.15 1.4.09.43-.06 1.32-.54 1.5-1.06.19-.52.19-.96.13-1.06-.06-.09-.2-.14-.42-.25Z" fill="currentColor"/></svg>
+      </span>
+      <span class="contact-primary__text">
+        <strong>Chamar no WhatsApp</strong>
+        <small>+55 75 9999-0776 · resposta rápida</small>
+      </span>
+      <span class="contact-primary__arrow" aria-hidden="true">→</span>
+    </a>
+
+    <div class="contact-secondary">
+      <button class="contact-chip" type="button" data-copy="contato@dvframe.com">
+        <span class="contact-chip__icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.5 6.5h17a1 1 0 0 1 1 1v9a1 1 0 0 1-1 1h-17a1 1 0 0 1-1-1v-9a1 1 0 0 1 1-1Z" stroke="currentColor" stroke-width="1.4"/><path d="m4 7.5 8 6 8-6" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </span>
+        <span class="contact-chip__text">
+          <small>E-mail</small>
+          <strong>menezesdavis81@gmail.com  </strong>
+        </span>
+        <span class="contact-chip__action" data-action-label>copiar</span>
+      </button>
+
+      <a class="contact-chip" href="https://instagram.com/davxs.7" target="_blank" rel="noopener">
+        <span class="contact-chip__icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="3.5" y="3.5" width="17" height="17" rx="5" stroke="currentColor" stroke-width="1.4"/><circle cx="12" cy="12" r="4" stroke="currentColor" stroke-width="1.4"/><circle cx="17" cy="7" r="1" fill="currentColor"/></svg>
+        </span>
+        <span class="contact-chip__text">
+          <small>Instagram</small>
+          <strong>@davxs.7</strong>
+        </span>
+        <span class="contact-chip__action">abrir</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <span class="footer__logo">Davi<span>Menezes</span></span>
+        <p>Produção audiovisual sob medida.</p>
+      </div>
+      <nav class="footer__links">
+        <a href="#sobre">Sobre</a>
+        <a href="#pacotes">Pacotes</a>
+        <a href="#extras">Extras</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="footer__social">
+        <a href="https://wa.me/557599990776" target="_blank" rel="noopener">WhatsApp</a>
+        <a href="https://www.instagram.com/davxs.7" target="_blank" rel="noopener">Instagram</a>
+        <a href="mailto:contato@dvframe.com">E-mail</a>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© <span id="year"></span> Davi Menezes. Todos os direitos reservados.</span>
+      <span>Cada frame conta uma história.</span>
+    </div>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="packages.js"></script>
+  <script src="animations.js"></script>
+  <script src="contact.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

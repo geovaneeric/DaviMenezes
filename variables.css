@@ -1,0 +1,49 @@
+:root {
+  /* ---- Color: warm near-black + bronze/copper, single accent family ---- */
+  --color-bg: #0b0a09;
+  --color-bg-alt: #100e0c;
+  --color-surface: #17140f;
+  --color-surface-hover: #1e1a14;
+  --color-border: #2b2419;
+
+  --color-text: #f3ece0;
+  --color-text-muted: #948a7c;
+  --color-text-faint: #5f584e;
+
+  --color-accent: #c4884c;       /* primary bronze */
+  --color-accent-light: #e6b877; /* warm gold highlight */
+  --color-accent-dim: #8a5f37;   /* deep bronze, for subtle fills */
+
+  /* ---- Type ---- */
+  --font-display: "Bodoni Moda", "Times New Roman", serif;
+  --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+
+  /* ---- Spacing scale ---- */
+  --space-1: 0.5rem;
+  --space-2: 1rem;
+  --space-3: 1.5rem;
+  --space-4: 2.5rem;
+  --space-5: 4rem;
+  --space-6: 6rem;
+  --space-7: 9rem;
+
+  /* ---- Layout ---- */
+  --content-width: 1180px;
+  --rail-width: 64px;
+  --radius-sm: 6px;
+  --radius-md: 14px;
+  --radius-lg: 24px;
+
+  /* ---- Motion ---- */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --dur-fast: 0.2s;
+  --dur-med: 0.5s;
+  --dur-slow: 0.9s;
+}
+
+@media (max-width: 860px) {
+  :root {
+    --rail-width: 28px;
+  }
+}
