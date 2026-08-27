@@ -33,6 +33,14 @@ const MAIN_PACKAGES = [
       "3 revisões",
     ],
   },
+  {
+    tier: "Mais opções sob consulta",
+    cta: true,
+    desc: "Precisa de um pacote maior, mais dias de gravação ou algo fora do padrão? Vamos conversar e montar sob medida.",
+    ctaLabel: "Falar no WhatsApp",
+    ctaHref: "https://wa.me/5575999570673",
+  },
+];
   ];
 
 const SHORT_PACKAGES = [
