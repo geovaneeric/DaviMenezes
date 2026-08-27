@@ -356,6 +356,49 @@
   background: var(--color-accent);
 }
 
+.tier-row--cta {
+  grid-template-columns: 1fr;
+}
+
+.package-card--cta {
+  border-style: dashed;
+  border-color: var(--color-accent-dim);
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--space-1);
+  text-align: left;
+}
+.package-card--cta::before {
+  background-image: none; /* remove a faixa pontilhada padrão, já tem borda tracejada */
+}
+.package-card--cta .package-card__name {
+  color: var(--color-accent-light);
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  text-transform: none;
+  letter-spacing: 0;
+}
+.package-card__cta-desc {
+  color: var(--color-text-muted);
+  font-size: 0.95rem;
+  max-width: 460px;
+}
+.package-card__cta-link {
+  margin-top: var(--space-1);
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--color-accent-light);
+  border-bottom: 1px solid var(--color-accent-dim);
+  padding-bottom: 2px;
+  transition: border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out);
+}
+.package-card__cta-link:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+}
+
 @media (max-width: 640px) {
   .tier-row { grid-template-columns: 1fr; }
 }
