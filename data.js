@@ -35,7 +35,6 @@ const MAIN_PACKAGES = [
   },
   {
     tier: "+Outros Pacotes",
-    price: ~~,
     plus: false,
     items: [
       "Diversos outros pacotes, com coberturas até maiores.",
