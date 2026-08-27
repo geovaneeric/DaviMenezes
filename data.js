@@ -16,7 +16,7 @@ const MAIN_PACKAGES = [
   {
     tier: "Básico Plus",
     price: 300,
-    plus: true,
+    plus: false,
     items: [
       "12 vídeos",
       "Edição",
