@@ -5,6 +5,19 @@
 
 function createPackageCard(pkg) {
   const card = document.createElement("article");
+
+  if (pkg.cta) {
+    card.className = "package-card package-card--cta reveal";
+    card.innerHTML = `
+      <span class="package-card__name">${pkg.tier}</span>
+      <p class="package-card__cta-desc">${pkg.desc}</p>
+      <a class="package-card__cta-link" href="${pkg.ctaHref}" target="_blank" rel="noopener">
+        ${pkg.ctaLabel} →
+      </a>
+    `;
+    return card;
+  }
+
   card.className = "package-card reveal" + (pkg.plus ? " package-card--plus" : "");
 
   const list = pkg.items.map((item) => `<li>${item}</li>`).join("");
@@ -26,15 +39,26 @@ function renderMainPackages() {
   const container = document.getElementById("mainPackages");
   if (!container) return;
 
+  const pairs = MAIN_PACKAGES.filter((pkg) => !pkg.cta);
+  const ctaCards = MAIN_PACKAGES.filter((pkg) => pkg.cta);
+
   // agrupa em pares: [Básico, Básico Plus], [Intermediário, Intermediário Plus], ...
-  for (let i = 0; i < MAIN_PACKAGES.length; i += 2) {
+  for (let i = 0; i < pairs.length; i += 2) {
     const row = document.createElement("div");
     row.className = "tier-row";
     row.dataset.stagger = "";
-    row.appendChild(createPackageCard(MAIN_PACKAGES[i]));
-    if (MAIN_PACKAGES[i + 1]) row.appendChild(createPackageCard(MAIN_PACKAGES[i + 1]));
+    row.appendChild(createPackageCard(pairs[i]));
+    if (pairs[i + 1]) row.appendChild(createPackageCard(pairs[i + 1]));
     container.appendChild(row);
   }
+
+  // card(s) de CTA ficam sozinhos, ocupando a linha inteira
+  ctaCards.forEach((pkg) => {
+    const row = document.createElement("div");
+    row.className = "tier-row tier-row--cta";
+    row.appendChild(createPackageCard(pkg));
+    container.appendChild(row);
+  });
 }
 
 function renderShortPackages() {
@@ -53,8 +77,7 @@ function renderExtraServices() {
     card.className = "extra-card reveal";
     card.innerHTML = `
       <span class="extra-card__label">${service.label}</span>
-      <div class="extra-card__price">${service.price}
-      </div>
+      <div class="extra-card__price">${service.price}</div>
       <p class="extra-card__desc">${service.desc}</p>
     `;
     container.appendChild(card);
