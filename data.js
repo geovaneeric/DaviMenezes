@@ -45,6 +45,7 @@ const MAIN_PACKAGES = [
       "3 revisões",
     ],
   },
+  ];
 
 const SHORT_PACKAGES = [
   {
