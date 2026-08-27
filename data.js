@@ -40,7 +40,6 @@ const MAIN_PACKAGES = [
     ctaLabel: "Falar no WhatsApp",
     ctaHref: "https://wa.me/5575999570673",
   },
-];
   ];
 
 const SHORT_PACKAGES = [
