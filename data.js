@@ -33,6 +33,14 @@ const MAIN_PACKAGES = [
       "3 revisões",
     ],
   },
+  {
+    tier: "+Outros Pacotes",
+    price: ~~,
+    plus: false,
+    items: [
+      "Diversos outros pacotes, com coberturas até maiores.",
+    ],
+  },
   ];
 
 const SHORT_PACKAGES = [
