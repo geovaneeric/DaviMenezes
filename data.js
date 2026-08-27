@@ -11,7 +11,6 @@ const MAIN_PACKAGES = [
     price: 200,
     plus: false,
     items: [
-      "2h de gravação",
       "1 vídeo curto (até 1 min)",
       "Edição básica",
       "Música de fundo",
@@ -22,7 +21,6 @@ const MAIN_PACKAGES = [
     price: 300,
     plus: true,
     items: [
-      "3h de gravação",
       "2 vídeos curtos (até 1 min cada)",
       "Edição básica",
       "Música de fundo",
@@ -33,7 +31,6 @@ const MAIN_PACKAGES = [
     price: 500,
     plus: false,
     items: [
-      "4h de gravação",
       "1 vídeo principal (até 3 min)",
       "2 vídeos curtos (até 1 min cada)",
       "Edição intermediária",
@@ -44,7 +41,6 @@ const MAIN_PACKAGES = [
     price: 750,
     plus: true,
     items: [
-      "5h de gravação",
       "1 vídeo principal (até 3 min)",
       "4 vídeos curtos (até 1 min cada)",
       "Edição intermediária (legendas e transições)",
@@ -55,7 +51,6 @@ const MAIN_PACKAGES = [
     price: 1200,
     plus: false,
     items: [
-      "6h de gravação",
       "1 vídeo principal (até 5 min)",
       "5 vídeos curtos (até 1 min cada)",
       "Edição avançada",
@@ -67,7 +62,6 @@ const MAIN_PACKAGES = [
     price: 1500,
     plus: true,
     items: [
-      "8h de gravação",
       "2 vídeos principais (até 5 min cada)",
       "6 vídeos curtos (até 1 min cada)",
       "Edição avançada",
@@ -81,7 +75,6 @@ const SHORT_PACKAGES = [
     tier: "Básico",
     price: 250,
     items: [
-      "2h de gravação",
       "3 vídeos curtos (até 30s cada)",
       "Edição básica",
       "Música de fundo",
@@ -91,7 +84,6 @@ const SHORT_PACKAGES = [
     tier: "Intermediário",
     price: 400,
     items: [
-      "3h de gravação",
       "5 vídeos curtos (até 30s cada)",
       "Edição intermediária (legendas básicas)",
     ],
@@ -100,7 +92,6 @@ const SHORT_PACKAGES = [
     tier: "Avançado",
     price: 800,
     items: [
-      "5h de gravação",
       "10 vídeos curtos (até 30s cada)",
       "Edição avançada",
       "Transições personalizadas",
