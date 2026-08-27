@@ -9,8 +9,13 @@ function createPackageCard(pkg) {
   if (pkg.cta) {
     card.className = "package-card package-card--cta reveal";
     card.innerHTML = `
-      <span class="package-card__name">${pkg.tier}</span>
-      <p class="package-card__cta-desc">${pkg.desc}</p>
+      <div class="package-card__head">
+        <span class="package-card__name">${pkg.tier}</span>
+      </div>
+      <div class="package-card__price package-card__price--cta">Sob consulta</div>
+      <ul class="package-card__list">
+        <li>${pkg.desc}</li>
+      </ul>
       <a class="package-card__cta-link" href="${pkg.ctaHref}" target="_blank" rel="noopener">
         ${pkg.ctaLabel} →
       </a>
@@ -39,26 +44,15 @@ function renderMainPackages() {
   const container = document.getElementById("mainPackages");
   if (!container) return;
 
-  const pairs = MAIN_PACKAGES.filter((pkg) => !pkg.cta);
-  const ctaCards = MAIN_PACKAGES.filter((pkg) => pkg.cta);
-
-  // agrupa em pares: [Básico, Básico Plus], [Intermediário, Intermediário Plus], ...
-  for (let i = 0; i < pairs.length; i += 2) {
+  // agrupa em pares, na ordem normal do array (o CTA entra no par que sobrar)
+  for (let i = 0; i < MAIN_PACKAGES.length; i += 2) {
     const row = document.createElement("div");
     row.className = "tier-row";
     row.dataset.stagger = "";
-    row.appendChild(createPackageCard(pairs[i]));
-    if (pairs[i + 1]) row.appendChild(createPackageCard(pairs[i + 1]));
+    row.appendChild(createPackageCard(MAIN_PACKAGES[i]));
+    if (MAIN_PACKAGES[i + 1]) row.appendChild(createPackageCard(MAIN_PACKAGES[i + 1]));
     container.appendChild(row);
   }
-
-  // card(s) de CTA ficam sozinhos, ocupando a linha inteira
-  ctaCards.forEach((pkg) => {
-    const row = document.createElement("div");
-    row.className = "tier-row tier-row--cta";
-    row.appendChild(createPackageCard(pkg));
-    container.appendChild(row);
-  });
 }
 
 function renderShortPackages() {
@@ -88,6 +82,5 @@ document.addEventListener("DOMContentLoaded", () => {
   renderMainPackages();
   renderShortPackages();
   renderExtraServices();
-  // avisa main.js/animations.js que novos elementos .reveal existem
   document.dispatchEvent(new CustomEvent("packages:rendered"));
 });
