@@ -65,7 +65,7 @@ const EXTRA_SERVICES = [
   {
     label: "Revisões extras",
     price: "R$ 50",
-    desc: "Alterações após as duas revisões já inclusas no pacote.",
+    desc: "Alterações após as revisões já inclusas no pacote.",
   },
   {
     label: "Edição expressa",
