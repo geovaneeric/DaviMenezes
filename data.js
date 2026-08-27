@@ -8,7 +8,7 @@ const MAIN_PACKAGES = [
     price: 200,
     plus: false,
     items: [
-      "1 vídeo curto",
+      "8 vídeos",
       "Edição",
       "2 revisões",
     ],
@@ -18,7 +18,7 @@ const MAIN_PACKAGES = [
     price: 300,
     plus: true,
     items: [
-      "2 vídeos curtos",
+      "12 vídeos",
       "Edição",
       "2 revisões",
     ],
@@ -28,20 +28,8 @@ const MAIN_PACKAGES = [
     price: 500,
     plus: false,
     items: [
-      "1 vídeo principal",
-      "2 vídeos curtos",
-      "Edição intermediária",
-      "3 revisões",
-    ],
-  },
-  {
-    tier: "Intermediário Plus",
-    price: 750,
-    plus: true,
-    items: [
-      "1 vídeo principal",
-      "4 vídeos curtos",
-      "Edição intermediária (legendas e transições)",
+      "20 vídeos",
+      "Edição",
       "3 revisões",
     ],
   },
@@ -52,7 +40,7 @@ const SHORT_PACKAGES = [
     tier: "Básico",
     price: 250,
     items: [
-      "3 vídeos curtos",
+      "10 vídeos",
       "Edição",
       "2 revisões",
     ],
@@ -61,19 +49,9 @@ const SHORT_PACKAGES = [
     tier: "Intermediário",
     price: 400,
     items: [
-      "5 vídeos curtos",
-      "Edição intermediária",
+      "16 vídeos",
+      "Edição",
       "2 revisões",
-    ],
-  },
-  {
-    tier: "Avançado",
-    price: 800,
-    items: [
-      "10 vídeos curtos",
-      "Edição avançada",
-      "Transições personalizadas",
-      "3 revisões",
     ],
   },
   {
