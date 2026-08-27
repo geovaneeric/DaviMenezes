@@ -40,7 +40,7 @@ const SHORT_PACKAGES = [
     tier: "Básico",
     price: 250,
     items: [
-      "10 vídeos",
+      "10 vídeos curtos",
       "Edição",
       "2 revisões",
     ],
@@ -49,7 +49,7 @@ const SHORT_PACKAGES = [
     tier: "Intermediário",
     price: 400,
     items: [
-      "16 vídeos",
+      "16 vídeos curtos",
       "Edição",
       "2 revisões",
     ],
